@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Michigan</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Michigan</h1>
+    </header>
+    
+    <section class="content">
+        <div class="image-placeholder">
+            <p>City Image Placeholder</p>
+        </div>
+        <div class="main-content">
+            <h2> Sign Up</h2>
+            <form onsubmit="return verifyEmail()">
+                <input type="text" id="first-name" placeholder="First Name">
+                <input type="text" id="last-name" placeholder="Last Name">
+                <input type="email" id="email" placeholder="Email Address">
+                <input type="email" id="confirm-email" placeholder="Confirm Email Address">
+                <textarea type="text" id="question-response" placeholder="Submit a question"></textarea>
+                </br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="aside-content">
+            <h2>Michigan Facts</h2>
+
+            <table>
+                <tr>
+                    <th>Fact</th>
+                    <th>Detail</th>
+                    <th>Note</th>
+                </tr>
+                <tr>
+                    <td>Capital</td>
+                    <td>Lansing</td>
+                    <td>Named after Lansing, New York</td>
+                </tr>
+                <tr>
+                    <td>Largest City</td>
+                    <td>Detroit</td>
+                    <td>Known for its automotive industry</td>
+                </tr>
+                <tr>
+                    <td>State Bird</td>
+                    <td>Robin</td>
+                    <td>Officially designated in 1931</td>
+                </tr>
+                <tr>
+                    <td>State Tree</td>
+                    <td>Eastern White Pine</td>
+                    <td>Symbolizes Michigan's logging history</td>
+                </tr>
+                <tr>
+                    <td>Great Lakes Touching Michigan</td>
+                    <td>4 (Superior, Michigan, Huron, Erie)</td>
+                    <td>Michigan has the longest freshwater coastline</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    <nav class="navigation">
+        <a href="capital.html"class="nav-button">Capital</a>
+    </nav>
+
+    <script>
+        function verifyEmail() {
+            var email = document.getElementById('email').value;
+            var confirmEmail = document.getElementById('confirm-email').value;
+
+            if (email !== confirmEmail) {
+                alert("Email addresses do not match.");
+                console.log("Email addresses do not match.")
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
